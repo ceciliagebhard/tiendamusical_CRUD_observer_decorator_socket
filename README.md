@@ -2,8 +2,9 @@
 
 
 Gebhard Records’ CRUD App: ¡La discográfica Gebhard Records™ se enorgullece de que haya elegido nuestros servicios! 
-Nuestra aplicación de CRUD le permitirá un correcto manejo de registros y consultas sobre sus artistas y álbumes favoritos; además con las nuevas actualizaciones permite registrar en txt un log con fecha y hora cada vez que se realiza una actividad del CRUD, función que es posible con la implementación de un decorador que actúa sobre las rutinas de ALTA, BAJA y MODIFICACIÓN.
-Cuenta con un observador que se comunica mediante un cliente a otra app en Pure Data enviando información cada vez que se realiza una actividad en el CRUD.
+Nuestra aplicación de CRUD le permitirá un correcto manejo de registros y consultas sobre sus artistas y álbumes favoritos; además cuenta con  actualizaciones que permiten registrar en txt un log con fecha y hora y notificar a otra app (desarrollada en Pure Data), cada vez que se realiza una actividad del CRUD, tomando los parámetros ingresados, eliminados o modificados.
+
+La misma utiliza regex, excepciones, decorador, observador, log en txt, queue y comunicación externa mediante socket. 
 
 Instalación: La aplicación es de fácil instalación: basta con descargar nuestro archivo:
 tiendamusicalMVC.zip
