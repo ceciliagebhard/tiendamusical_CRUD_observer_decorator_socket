@@ -6,15 +6,19 @@ Nuestra aplicación de CRUD le permitirá un correcto manejo de registros y cons
 
 La misma utiliza regex, excepciones, decorador, observador, log en txt, queue y comunicación externa mediante socket. 
 
-Instalación: La aplicación es de fácil instalación: basta con descargar nuestro archivo:
+Instalación: 
+La aplicación es de fácil instalación: basta con descargar nuestro archivo:
 tiendamusicalMVC.zip
 extraerlo y ejecutar el archivo: controlador.py desde un editor de código Los editores que pueden utilizarse incluyen –pero no están limitados a- Visual Studio Code, JupyterLab, IDLE, etc.
 
-Características: Nuestra aplicación considera 4 campos: artista, álbum, unidades y valor. La misma permite funciones CRUD/ABMC: dar de alta y de baja elementos, consultar los valores hasta el momento y permite la modificación de los mismos. 
+Características: 
+Nuestra aplicación considera 4 campos: artista, álbum, unidades y valor. La misma permite funciones CRUD/ABMC: dar de alta y de baja elementos, consultar los valores hasta el momento y permite la modificación de los mismos. 
 Los datos colocados son guardados dentro de una base de datos que utiliza SQLite, y cada actividad queda registrada en un log en txt. 
 Su entorno gráfico está realizado en Tkinter.
 
-Contribución: GitHub: https://github.com/ceciliagebhard/tiendamusical_CRUD_observer_decorator_socket.git 
+Contribución: 
+GitHub: https://github.com/ceciliagebhard/tiendamusical_CRUD_observer_decorator_socket.git 
+Se encuentran todos los módulos que conforman la app, incluyendo el ejecutable en Pure Data y un dmg para instalar Pure Data en Mac Osx.
 Las pull requests son bienvenidas: ante la necesidad de modificar el código preexistente, abra un issue en GitHub postulando qué desea cambiar.
 
 Implementación de Observador:
