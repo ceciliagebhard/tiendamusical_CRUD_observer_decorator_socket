@@ -82,7 +82,6 @@ def aviso(funcion):
 
 
 
-# the user model specifies its fields (or columns) declaratively, like django
 class Discografica(BaseModel):
     artista = CharField(unique=False)
     album = CharField()
