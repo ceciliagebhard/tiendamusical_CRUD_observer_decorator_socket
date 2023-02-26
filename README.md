@@ -17,18 +17,25 @@ Contribución: GitHub: https://github.com/ceciliagebhard/tiendamusical_CRUD_obse
 Las pull requests son bienvenidas: ante la necesidad de modificar el código preexistente, abra un issue en GitHub postulando qué desea cambiar.
 
 Implementación de Observador:
+Se encuentra en el módulo observador.py y recibe información de modulo.py llamando a cliente.py para enviar información a otra app desarrollada en Pure Data.
 
 Implementación de Decorador:
+La función del decorador se encuentra en la línea 29 del script de modelo.py
+Actúa sobre las rutinas de ALTA (línea 103 de modelo.py), BAJA (línea 146 de modelo.py) y MODIFICAR (línea 167 de modelo.py).
+De esta manera cada vez que se realiza un registro en el CRUD (ya sea ALTA, BAJA o MODIFICAR) guarda en un archivo txt un log con la actividad realizada (con fecha y hora) y los parámetros involucrados.
 
 Implementación de Socket:
+Se encuentra en el módulo cliente.py y se ejecuta cada vez que se acplica observador.py, es decir, cada vez que se realiza una actividad en el CRUD.
 
+Implementación de Queue en rutina Modificar:
+Se encuentra en la línea 172 de modelo.py
+Guarda en queue información que podría llegar a ser utilizada para diversos fines (compilar información para enviar mediante socket, hacer un log en txt, etc).
 
 Implementación de Excepciones:
-1era Excepción: Se encuentra el uso de try/except/finally en el constructor init en las filas 15, 28 y 30 (respectivamente) del script del archivo modelo.py #excepción que comunica que la base de datos se crea al dar el alta, y en caso de estar creada da otro aviso. #mediante finally, en ambos casos comunica que se puede consultar, modificar o eliminar.
+Se encuentra el uso de raise en la rutina que define el "Alta" en la fila 106 del script del archivo modelo.py 
+Esta excepción impide el alta si se ingresa un número negativo en el item unidades
 
-2da Excepción: Se encuentra el uso de raise en la rutina que define el "Alta" en la fila 51 del script del archivo modelo.py #excepción que impide el alta si se ingresa un número negativo en el item unidades
-
-Implementación de Regex: Se encuentra en la rutina que define el “Alta” en la fila 49 del script del archivo modelo.py patron = "[a-zA-Záéíóú 0-9 \s]+" #regex que valida campo de entrada artistas tolerando varios espacios, entre caracteres alfanúmericos.
+Implementación de Regex: Se encuentra en la rutina que define el “Alta” en la fila 104 del script del archivo modelo.py patron = "[a-zA-Záéíóú 0-9 \s]+" #regex que valida campo de entrada artistas tolerando varios espacios, entre caracteres alfanúmericos.
 
 Integrantes del grupo: Matias Estigarribia, Cecilia Gebhard, Emilio Herrera, Diego Jordan e Ignacio Lopez Habiague.
 
